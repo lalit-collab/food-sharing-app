@@ -3,7 +3,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
-const page = () => {
+const Page = () => {
 
   const [data,setData] = useState({
     name:"",
@@ -62,4 +62,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page

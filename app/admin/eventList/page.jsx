@@ -3,7 +3,7 @@ import FoodTableItem from '@/Components/AdminComponents/FoodTableItem';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
-const page = () => {
+const Page = () => {
     const [food,setFood] = useState([]);
 
     const fetchFood = async () => {
@@ -56,4 +56,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
