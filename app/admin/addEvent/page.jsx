@@ -3,13 +3,12 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { toast } from 'react-toastify'
 
-const Page = () => {
+const page = () => {
 
   const [data,setData] = useState({
     name:"",
     description:"",
     city:"",
-    street:""
   })
 
   const onChangeHandler = (event) => {
@@ -24,7 +23,6 @@ const Page = () => {
     formData.append('name',data.name);
     formData.append('description',data.description);
     formData.append('city',data.city);
-    formData.append('street',data.street);
 
     const response = await axios.post('/api',formData);
     if(response.data.success){
@@ -62,4 +60,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default page
