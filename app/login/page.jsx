@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useState } from 'react'
 import { toast } from 'react-toastify';
 
-const page = () => {
+const Page = () => {
 
   const [user, setUser] = useState({
     username: '',
@@ -64,4 +64,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page;

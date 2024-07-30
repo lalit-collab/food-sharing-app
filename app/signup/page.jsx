@@ -4,7 +4,7 @@ import {React,useState} from 'react'
 import { toast } from 'react-toastify'
 
 
-const page = () => {
+const Page = () => {
 
   const [user,setUser] = useState({
     name:"",
@@ -64,4 +64,4 @@ const page = () => {
   )
 }
 
-export default page
+export default Page;
