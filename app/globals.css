@@ -11,4 +11,20 @@
     scrollbar-width: none;
 }
 
-  
+.hero h1{
+    width: 70%;
+    font-size: 90px;
+    font-weight: 600;
+    background: linear-gradient(270deg, #31708e 10%, #8fc1e3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.foodList h1{
+    font-size: 80px;
+    font-weight: 500;
+    background: linear-gradient(270deg, #31708e 10%, #8fc1e3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

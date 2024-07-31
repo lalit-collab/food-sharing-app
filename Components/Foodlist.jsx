@@ -82,8 +82,8 @@ const Foodlist = () => {
   }, [])
 
   return (
-    <div>
-      <form onSubmit={handleSubmit} className='flex justify-between max-w-[500px] scale-75 sm:scale-100 mx-auto mt-10 border border-black shadow-[-7px_7px_0px_#000000]'>
+    <div className='foodList'>
+      <form onSubmit={handleSubmit} className='flex justify-between max-w-[500px] scale-75 sm:scale-100 mx-auto mt-10 border border-black rounded-md'>
         <input
           type="text"
           value={menu}
@@ -91,10 +91,12 @@ const Foodlist = () => {
           placeholder='Enter Your City'
           className='pl-4 outline-none'
         />
-        <button type='submit' className='border-l border-black py-4 px-4 sm:px-8 active:bg-gray-600 active:text-white'>
+        <button type='submit' className='border-l border-black py-4 px-4 sm:px-8 active:blue text-white bg-customBlue'>
           Find city
         </button>
       </form>
+
+      <h1 className='text-center mt-20 mb-20'>Free Servings Listed</h1>
 
       <div className='flex flex-wrap justify-around gap-1 gap-y-10 mb-16 xl:mx-24'>
         {food.filter(item => menu === "" ? true : item.city === menu).map((item, index) => (

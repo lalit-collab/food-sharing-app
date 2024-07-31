@@ -1,19 +1,35 @@
 'use client';
 import React, { useState, useEffect } from 'react';
+import { carousel } from '@/Assets/carousel';
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  // const images = [
+  //   {
+  //     src: 'https://mdbcdn.b-cdn.net/img/new/slides/041.webp',
+  //     alt: 'Wild Landscape'
+  //   },
+  //   {
+  //     src: 'https://mdbcdn.b-cdn.net/img/new/slides/042.webp',
+  //     alt: 'Camera'
+  //   },
+  //   {
+  //     src: 'https://mdbcdn.b-cdn.net/img/new/slides/043.webp',
+  //     alt: 'Exotic Fruits'
+  //   }
+  // ];
+
   const images = [
     {
-      src: 'https://mdbcdn.b-cdn.net/img/new/slides/041.webp',
+      src: '/assets/1.jpg',
       alt: 'Wild Landscape'
     },
     {
-      src: 'https://mdbcdn.b-cdn.net/img/new/slides/042.webp',
+      src: '/assets/2.jpg',
       alt: 'Camera'
     },
     {
-      src: 'https://mdbcdn.b-cdn.net/img/new/slides/043.webp',
+      src: '/assets/3.jpg',
       alt: 'Exotic Fruits'
     }
   ];
@@ -21,7 +37,7 @@ const Carousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 6000); // Change image every 6 seconds
+    }, 3000); // Change image every 6 seconds
 
     return () => clearInterval(interval);
   }, [images.length]);
