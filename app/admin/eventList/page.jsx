@@ -2,6 +2,7 @@
 import FoodTableItem from '@/Components/AdminComponents/FoodTableItem';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 const Page = () => {
     const [food,setFood] = useState([]);
@@ -9,7 +10,16 @@ const Page = () => {
     const fetchFood = async () => {
         const response = await axios.get("/api");
         setFood(response.data.food);
-        console.log(response.data.food);
+    }
+
+    const deleteFoods = async (mongoId) => {
+      const response = await axios.delete('/api',{
+        params:{
+          id:mongoId
+        }
+      });
+      toast.success(response.data.msg);
+      fetchFood();
     }
 
     useEffect(()=>{
@@ -43,10 +53,11 @@ const Page = () => {
             {food.map((item, index) => (
               <FoodTableItem
                 key={index}
-                id={item._id}
+                mongoId={item._id}
                 name={item.name}
                 description={item.description}
                 city={item.city}
+                deleteFood={deleteFoods}
               />
             ))}
           </tbody>

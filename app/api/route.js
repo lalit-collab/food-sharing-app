@@ -25,7 +25,7 @@ export async function GET(request){
 }
 
 
-// API Endpoint for uploading Blogs
+// API Endpoint for uploading Food
 export async function POST(request){
     const formData = await request.formData();
 
@@ -42,4 +42,12 @@ export async function POST(request){
 
 
     return NextResponse.json({success:true,message:"Details Added"})
+}
+
+//API Request to delete Food
+export async function DELETE(request){
+    const id = await request.nextUrl.searchParams.get('id');
+    await FoodModel.findByIdAndDelete(id);
+
+    return NextResponse.json({msg:"Blog Deleted"})
 }

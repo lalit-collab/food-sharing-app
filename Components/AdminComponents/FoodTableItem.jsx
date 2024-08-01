@@ -2,7 +2,7 @@ import { assets } from '@/Assets/assets'
 import Image from 'next/image'
 import React from 'react'
 
-const FoodTableItem = ({name,description,city}) => {
+const FoodTableItem = ({name,description,city,deleteFood,mongoId}) => {
 
 
   return (
@@ -17,7 +17,7 @@ const FoodTableItem = ({name,description,city}) => {
         <td className='px-6 py-4'>
           {city?city:"No description"}
         </td>
-        <td className='px-11 py-4 cursor-pointer'>
+        <td onClick={()=>deleteFood(mongoId)} className='px-11 py-4 cursor-pointer'>
           X
         </td>
     </tr>
