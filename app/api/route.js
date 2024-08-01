@@ -49,5 +49,5 @@ export async function DELETE(request){
     const id = await request.nextUrl.searchParams.get('id');
     await FoodModel.findByIdAndDelete(id);
 
-    return NextResponse.json({msg:"Blog Deleted"})
+    return NextResponse.json({msg:"Event Deleted"})
 }
