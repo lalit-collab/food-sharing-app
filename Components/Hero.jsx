@@ -22,9 +22,9 @@ const Hero = () => {
                     <Image src='/assets/logo.jpg' alt='' width={400} height={400} className='rounded-full'/>
                 </div>
             </div>
-            <div className='px-40'>
+            <div className='px-40 items-center'>
                 <Carousel />
-                <hr className='mt-10 w-[60%]' />
+                <hr className='mt-10 w-[60%] items-center' />
             </div>
         </div>
     )
