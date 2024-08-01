@@ -11,14 +11,32 @@
     scrollbar-width: none;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background: #00246B;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #00246B;
+}
+
 .hero h1{
-    width: 70%;
+    width: full;
     font-size: 90px;
     font-weight: 600;
     background: linear-gradient(270deg, #31708e 10%, #8fc1e3 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+.hero h2{
+    font-size: 20px;
+    font-weight: 400;
+    
 }
 .foodList h1{
     font-size: 80px;

@@ -70,6 +70,7 @@ const Foodlist = () => {
   const fetchFood = async () => {
     const response = await axios.get("/api");
     setFood(response.data.food);
+    console.log(response.data.food);
   }
 
   const fetchFoodByCity = async () => {
@@ -106,7 +107,8 @@ const Foodlist = () => {
             name={item.name}
             description={item.description}
             city={item.city}
-            street={item.street}
+            capacity={item.capacity}
+            current={item.current}
           />
         ))}
       </div>

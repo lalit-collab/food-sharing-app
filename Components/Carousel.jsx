@@ -21,11 +21,11 @@ const Carousel = () => {
 
   const images = [
     {
-      src: '/assets/1.jpg',
+      src: '/assets/F1.jpg',
       alt: 'Wild Landscape'
     },
     {
-      src: '/assets/2.jpg',
+      src: '/assets/F2.jpg',
       alt: 'Camera'
     },
     {

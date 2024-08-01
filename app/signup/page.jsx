@@ -54,7 +54,7 @@ const Page = () => {
               <input name='password' onChange={onChangeHandler} value={user.password} className="inline-block w-full p-4 leading-6 text-lg font-extrabold placeholder-indigo-900 bg-white shadow border-2 border-indigo-900 rounded" type="password" placeholder="**********"/>
             </div>
             
-            <button type='submit' className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-indigo-800 hover:bg-indigo-900 border-3 border-indigo-900 shadow rounded transition duration-200">Sign up</button>
+            <button type='submit' className="inline-block w-full py-4 px-6 mb-6 text-center text-lg leading-6 text-white font-extrabold bg-customBlue hover:bg-customGreen border-3 border-indigo-900 shadow rounded transition duration-200">Sign up</button>
             <p className="text-center font-extrabold">Already have an account? <a className="text-red-500 hover:underline"
               href="/login">Login</a></p>
           </form>

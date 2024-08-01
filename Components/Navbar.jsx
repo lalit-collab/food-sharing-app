@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 const Navbar = () => {
     return (
@@ -11,8 +12,9 @@ const Navbar = () => {
                 <div className="flex items-center">
                     <ul className="hidden sm:flex justify-between items-center">
                         <Link href='/' className="px-5 py-3 text-center">Home</Link>
-                        <Link href='/about' className="px-5 py-3 text-center">About</Link>
-                        <Link href='/contact' className="px-5 py-3 text-center">Contact</Link>
+                        <li> <AnchorLink className='anchor-link px-5 py-3 text-center' offset={50} href='#about'>About</AnchorLink> </li>
+                        <li> <AnchorLink className='anchor-link px-5 py-3 text-center' offset={50} href='#contact'>Contact</AnchorLink> </li>
+                        
                     </ul>
                 </div>
             </div>

@@ -33,7 +33,8 @@ export async function POST(request){
         name: `${formData.get('name')}`,
         description: `${formData.get('description')}`,
         city: `${formData.get('city')}`,
-        street: `${formData.get('street')}`
+        capacity: `${formData.get('capacity')}`,
+        current: 0
     }
 
     await FoodModel.create(foodData);
