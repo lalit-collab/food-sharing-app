@@ -7,7 +7,7 @@ const About = () => {
         <>
             <div className='hero py-20' id='about'>
                 <h1 className='text-center'>About Us</h1>
-                <div className='flex'>
+                <div className='md:flex none'>
                     <Image src='/assets/about.jpg' width={400} height={500} alt='' className='ml-20' />
                     <div>
                         <h2 className='w-full text-left px-20 text-[20px]'>At Hungry Helpers, our mission goes beyond serving delicious meals. We are driven by a passion to reduce food wastage, ensure that everyone has access to nutritious food, and foster a sense of love and unity within our community. <br /><br /> We want to make a change by :
