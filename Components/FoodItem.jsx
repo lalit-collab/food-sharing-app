@@ -18,7 +18,7 @@ const FoodItem = ({ id, name, description, city, capacity, current}) => {
             alert(response.data.message);
         }
     }
-
+// SolveAThon
     return (
         <div className='w-[330px] mt-10 sm:max-w-[300px] bg-customGreen border border-black hover:shadow-[-7px_7px_0px_#31708e] hover:scale-[1.02] rounded-md transition duration-500 ease-in-out'>
             <div className='flex'>
